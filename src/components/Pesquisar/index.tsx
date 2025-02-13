@@ -26,7 +26,7 @@ const Pesquisar = () => {
             <Input placeholder="Escreva sua próxima leitura" onBlur={handleBlur} />
             <ResultadoPesquisa>
                 {resultadoPesquisa.map((livro, index) => (
-                    <Card id={index} nome={livro.nome} src={livro.src}></Card>
+                    <Card id={index} nome={livro.nome} ></Card>
                 ))}
             </ResultadoPesquisa>
         </Container>
@@ -37,10 +37,11 @@ export default Pesquisar
 
 // Estilos
 const Container = styled.section`
+    height: 600px;
+    background-image: linear-gradient(90deg, #002F52 35%, #326589);
     color: #FFF;
     text-align: center;
     padding: 85px 0;
-    height: auto;
     width: 100%;
 `
 

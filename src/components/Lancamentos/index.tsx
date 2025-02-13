@@ -1,18 +1,14 @@
 import styled from "styled-components";
-import Dados from '../Pesquisar/Dados.json'
-import Card from '../Card/index'
 import Titulo from "../Titulo";
+import SimpleSlider from "../Carroussel";
 const Lancamentos = () =>{
     return(
         <Secao>
                 <Titulo Cor="black">Últimos lançamentos</Titulo>
                 <Container>
-                {Dados.map((livro, index) => {
-                    if (livro.Data > 20240212) {
-                        return <Card id={index} nome={livro.nome} src={livro.src} />;
-                    }
-                    return null;
-                })}
+                <SimpleSlider>
+
+                </SimpleSlider>
                 </Container>
         </Secao>
     )

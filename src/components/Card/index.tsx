@@ -4,16 +4,15 @@ import styled from "styled-components"
 interface CardType{
     id: number;
     nome: string;
-    src: string;
 }
 
-const CardLivro = ({id , nome, src} :CardType) => {
-    const livro = { id, nome, src };
+const CardLivro = ({id , nome } :CardType) => {
+    const livro = { id, nome };
     return(
         <Card key={id}>
-            <img src={src} alt={nome} />
+            <img src={`/imagens/livro${id}.png`} alt={nome} />
             <p>{nome}</p>
-            <Link to={`./Info/${id}`} state={{ livro }} ><button></button></Link>
+            <Link to={`./Info/${id}`} state={{ livro }} ><button>Ler</button></Link>
         </Card>
     )
 }

@@ -6,7 +6,7 @@ interface imgTypes{
 }
 
 const Logo = ({ url } :imgTypes) => {
-    const ImgUrl = `./imagens/${url}.svg`
+    const ImgUrl = `./imagens/${url}.png`
     const ImgAlt = url
    
     return(
@@ -20,6 +20,8 @@ export default Logo
 
 const Img = styled.img`
 margin:1%;
+width: 7%;
+height: 7%;
 cursor: pointer;`
 
 const Negrito = styled.span`
