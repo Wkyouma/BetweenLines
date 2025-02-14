@@ -24,11 +24,13 @@ const Pesquisar = () => {
         <Container>
             <Titulo Cor=''>Já sabe por onde começar?</Titulo>
             <Input placeholder="Escreva sua próxima leitura" onBlur={handleBlur} />
+       
             <ResultadoPesquisa>
                 {resultadoPesquisa.map((livro, index) => (
                     <Card id={index} nome={livro.nome} ></Card>
                 ))}
             </ResultadoPesquisa>
+     
         </Container>
     )
 }
@@ -37,7 +39,8 @@ export default Pesquisar
 
 // Estilos
 const Container = styled.section`
-    height: 600px;
+    height: auto;
+    min-height: 600px;
     background-image: linear-gradient(90deg, #002F52 35%, #326589);
     color: #FFF;
     text-align: center;
@@ -48,10 +51,10 @@ const Container = styled.section`
 
 const ResultadoPesquisa = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os elementos */
+    gap: 20px; /* Espaçamento entre os cards */
+    max-width: 80%; /* Ajuste conforme necessário */
+    margin: auto; /* Centraliza o container */
     color: #FFF;
-
 `
