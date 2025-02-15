@@ -1,0 +1,13 @@
+const fs = require('fs');
+
+JSON.parse(fs.readFileSync("Dados.json")):
+readFileSync le o arquivo
+converter essa string JSON
+
+fs.writeFileSync("Dados.json", JSON.stringify([...DadosAtt,NovoDado ])):
+writeFileSync escreve/adiciona o objeto no json
+stringify converte um obj pra string
+
+
+app.use(express.json()):
+no app precisa ter isso para aceitar JSON
